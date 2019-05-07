@@ -1,16 +1,32 @@
 body {
   background-color: purple;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center; 
 }
 
 p {
   color: white;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;  
+}
+
+p::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: blink .7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
