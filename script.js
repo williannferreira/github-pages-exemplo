@@ -18,7 +18,7 @@ function blinkText(element) {
       element.style.backgroundColor = 'black';
       element.style.color = 'white';
     }
-  }, 2500)
+  }, 500)
 }
 
 const p = document.querySelector('#text');
