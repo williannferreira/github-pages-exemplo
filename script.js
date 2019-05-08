@@ -4,7 +4,7 @@ function typeWriter(element) {
   textArray.forEach((letter, i) => {
     setTimeout(() => element.innerHTML += letter, i * 75);
   });
-  blinkText(element);
+  // blinkText(element);
 }
 
 function blinkText(element) {
