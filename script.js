@@ -4,13 +4,14 @@ function typeWriter(element) {
   textArray.forEach((letter, i) => {
     setTimeout(() => element.innerHTML += letter, i * 75);
   });
+  setInterval(() => blinkText(element), 500);
   blinkText(element);
 }
 
 function blinkText(element) {
   let backgroundColor = getRandomColor();
   let color = getRandomColor();
-  setInterval(() => {
+  
     element.style.backgroundColor = backgroundColor;
     element.style.color = color;
 //     if (element.style.backgroundColor == 'black') {
@@ -19,8 +20,7 @@ function blinkText(element) {
 //     } else {
 //       element.style.backgroundColor = 'black';
 //       element.style.color = 'white';
-//     }
-  }, 500)
+//     
 }
 
 function getRandomColor() {
